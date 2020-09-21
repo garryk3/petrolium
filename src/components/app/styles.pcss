@@ -1,0 +1,211 @@
+:global {
+    html {
+        scrollbar-color: #C5C5C5 #E4E4E4;
+        scrollbar-width: thin;
+        background: #fff;
+
+        @media(max-width: 768px) {
+            overflow-x: hidden;
+        }
+    }
+
+    body {
+        margin: 0;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    input:-webkit-autofill {
+        -webkit-text-fill-color: #242424;
+        -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: #E4E4E4;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #C5C5C5;
+      }
+      
+      ::-webkit-scrollbar-thumb:hover {
+        background: #5E5E5E;
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+}
+
+.app {
+    --c-red: #EF1400;
+    --c-dark: #242424;
+    --c-green: #4EBC50;
+    --c-l-grey: #E8E8E8;
+    --c-m-grey: #C5C5C5;
+    --c-l-bg: #F8F8F8;
+    --c-d-grey: #5E5E5E;
+    --c-blue: #42B1E5;
+    --c-purple: #B13491;
+    
+    --grad-1: linear-gradient(90deg, #7A79BF 0%, #42B0E3 100%);
+    --grad-2: linear-gradient(90deg, #B13491 -34.77%, #A73F99 -23.56%, #8368B4 20.86%, #6788C9 64.41%, #529FD9 106.35%, #46ACE2 145.98%, #42B1E5 180.84%);
+    --grad-3: radial-gradient(62.39% 62.39% at 50% 50%, #7A79BF 29.17%, #42B0E3 100%);
+    --grad-4: linear-gradient(88.46deg, #42B0E3 6.23%, #7A79BF 25.07%, #7A79BF 33.14%, #7A79BF 41.75%, #42B0E3 57.9%);
+    
+    --col: 74px;
+    --gutter: 30px;
+    
+    --col-2: calc(var(--col) * 2 + var(--gutter));
+    --col-3: calc(var(--col) * 3 + var(--gutter) * 2);
+    --col-6: calc(var(--col) * 6 + var(--gutter) * 5);
+    --col-8: calc(var(--col) * 8 + var(--gutter) * 7);
+    --col-12: calc(var(--col) * 12 + var(--gutter) * 11);
+
+    --mob: 768px;
+
+    h1 {
+        font-size: 67px;
+        line-height: 80px;
+        font-weight: bold;
+
+        @media(max-width: 768px) {
+            font-size: 40px;
+            line-height: 48px;
+        }
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: bold;
+
+        @media(max-width: 768px) {
+            font-size: 32px;
+            line-height: 38px;
+        }
+    }
+
+    h3 {
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: bold;
+
+        @media(max-width: 768px) {
+            font-size: 22px;
+            line-height: 26px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: bold;
+
+        @media(max-width: 768px) {
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 27px;
+        margin-bottom: 23px;
+
+        @media(max-width: 768px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+
+    
+    h1, h2, h3, h4 {
+        font-family: 'GothamBold';
+    }
+
+    h1, h2 {
+        margin: 40px 0;
+    }
+
+    h3, h4 {
+        margin: 16px 0;
+    }
+
+    h1, h2, h3, h4, p {
+        color: var(--c-dark);
+    }
+
+    a {
+        &:not([class*="button"]) {
+            color: var(--c-blue);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    @font-face {
+        font-family: 'Gotham';
+        src: url('./fonts/GothamPro.woff'); 
+    }
+
+    @font-face {
+        font-family: 'GothamBook';
+        src: url('./fonts/GothamBook.ttf'); 
+    }
+
+    @font-face {
+        font-family: 'GothamLight';
+        src: url('./fonts/GothamPro-Light.woff');
+    }
+
+    @font-face {
+        font-family: 'GothamMedium';
+        src: url('./fonts/GothamPro-Medium.woff');
+    }
+
+    @font-face {
+        font-family: 'GothamBold';
+        src: url('./fonts/GothamPro-Bold.woff');
+    }
+
+    position: relative;
+    font-family: 'Gotham';
+    width: var(--col-12);
+    margin: 0 auto;
+    min-height: 100vh;
+
+    @media(max-width: 768px) {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    &__warning {
+        z-index: 12;
+        width: 1282px;
+        margin: auto;
+        position: fixed;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+    }
+}

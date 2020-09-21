@@ -1,0 +1,85 @@
+.personalArea {
+    display: flex;
+    min-height: 100vh;    
+
+    @media(max-width: 768px) {
+        width: 100%;
+    }
+
+    &__left {
+        padding: 100px calc(var(--col) + var(--gutter) + 6px) 24px 0;
+        width: calc(var(--col-6) + 3px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h2 {
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 32px;
+        }
+
+        label {
+            margin-bottom: 41px;
+        }
+
+        @media(max-width: 768px) {
+            padding: 24px;
+            width: 100%;
+            min-height: 100vh;
+        }
+    }
+
+    &__right {
+        position: relative;
+        width: calc(var(--col-6) + var(--gutter) - 3px);
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 751px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: url('./img/splash-screen.png');
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+
+        @media(max-width: 768px) {
+            display: none;
+            width: 0;
+        }
+    }
+
+    &__left, &__right {
+    }
+
+    &__logo {
+        background: url('../../img/logo.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 107px;
+        height: 65px;
+    }
+
+    &__info {
+        display: flex;
+        align-items: flex-start;
+
+        svg {
+            flex-shrink: 0;
+            margin-right: 10px;
+
+            & path {
+                fill: var(--c-green);
+            }
+        }
+    }
+    
+    &__backBtn {
+        width: 272px;
+    }
+}

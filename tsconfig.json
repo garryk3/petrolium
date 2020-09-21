@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "esModuleInterop": true,
+      "target": "ES6",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "strict": true,
+      "jsx": "react",
+      "jsxFactory": "h",
+      "incremental": true,
+      "experimentalDecorators": true,
+      "lib": ["dom", "es2015"],
+      "baseUrl": ".",
+      "paths": {
+        "routes/*": ["src/routes/*"],
+        "components/*": ["src/components/*"],
+        "utils/*": ["src/utils/*"],
+        "configs/*": ["src/configs/*"],
+        "ui/*": ["src/ui/*"],
+        "img/*": ["src/img/*"],
+        "react": ["node_modules/preact/compat"],
+        "react-dom": ["node_modules/preact/compat"]
+      },
+      "sourceMap": true,
+      "allowSyntheticDefaultImports": true,
+      "outDir": "./build",
+      "skipLibCheck": true,
+      "noImplicitAny": false
+    },
+    "include": ["./src/**/*", "./src/img/*.gif"]
+  }

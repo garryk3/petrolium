@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web_app:
+    container_name: web-app
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+    volumes:
+      - static:/usr/src/app/dp/build
+    ports:
+      - '80:80'
+    restart: always
+volumes:
+    static:

@@ -1,0 +1,39 @@
+.circleLoader {
+    transform: rotate(-90deg);  
+    stroke: var(--c-green);
+
+    & circle {
+        stroke-dasharray: 130;
+        stroke-dashoffset: 130;
+        animation: dash 1.5s infinite;  
+    }
+
+    &__wrapper {
+        z-index: 22;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.25);
+    }
+}
+
+@keyframes dash {
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -$offset;
+  }  
+}
+
+.calcLoader {
+  width: 100px;
+  height: 100px;
+  background: url('../../img/loader.gif');
+  background-repeat: no-repeat;
+}

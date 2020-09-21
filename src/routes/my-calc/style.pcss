@@ -1,0 +1,131 @@
+.myCalc {
+
+    @media(max-width: 768px) {
+        padding: 24px;
+    }
+    &__pagination {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+
+        @media(max-width: 768px) {
+            flex-direction: column-reverse;
+        }
+    
+        button {
+            margin-right: 20px;
+
+            @media(max-width: 768px) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    h2 {
+        margin-bottom: 8px;
+
+        @media(max-width: 768px) {
+            margin-top: 0;
+        }
+
+        & ~p {
+            margin-top: 0;
+        }
+    }
+
+
+    &__tableRow {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        padding: 0 16px;
+
+        @media(max-width: 768px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 24px;
+            background: #FAFAFA;
+            padding: 16px;
+            height: auto;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        &:nth-child(odd) {
+            background: #FAFAFA;
+        }
+
+        &_heading {
+            font-family: 'GothamMedium';
+            border-bottom: 1px solid #DADADA;
+
+            @media(max-width: 768px) {
+                display: none;
+            }
+        }
+
+        & span {
+            &:nth-of-type(1) {
+                width: 130px; 
+
+                @media(max-width: 768px) {
+                    width: auto;
+                }
+            }
+            &:nth-of-type(2) {
+                width: 260px; 
+
+                @media(max-width: 768px) {
+                    width: auto;
+                    text-align: right;
+                }
+            }
+
+            &:nth-of-type(1), &:nth-of-type(2) {
+                @media(max-width: 768px) {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            &:nth-of-type(3) {
+                @media(max-width: 768px) {
+                    font-family: 'GothamBold';
+                    margin: 8px 0 24px;
+                    font-size: 20px;
+                    line-height: 24px;
+                    grid-column: 1 / -1;
+                }
+            }
+            &:nth-of-type(4) {
+                display: flex;
+                align-items: center;
+                font-family: 'GothamMedium';
+                padding: 0 16px;
+                cursor: pointer;
+                margin-left: auto; 
+                color: var(--c-d-grey);
+                
+                @media(max-width: 768px) {
+                    margin-left: 0;
+                    grid-column-start: 1;
+                    grid-column: 1 / -1;
+                    border: 2px solid var(--c-dark);
+                    border-radius: 4px;
+                    height: 40px;
+                    color: var(--c-dark);
+                    justify-content: center;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                & svg {
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}

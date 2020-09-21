@@ -1,0 +1,60 @@
+.slider {
+    position: relative;
+    padding-bottom: 24px;
+    
+    &__arrow {
+        z-index: 1;
+        position: absolute;
+        top: 40px;
+        bottom: 0;
+        width: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &_left {
+            left: 0;
+        }
+
+        &_right {
+            right: 0;
+        }
+
+        &:hover {
+            opacity: 0.5;
+            background: var(--c-l-grey);
+        }
+    }
+
+    & div[class*='BrainhubCarousel__arrow--disable'] {
+        .slider__arrow {
+            opacity: 0.2;
+        }
+    }
+
+    & ul[class*='BrainhubCarousel__dots'] {
+        position: absolute;
+
+        li {
+            border-radius: 4px;
+        }
+
+        button[class*='BrainhubCarousel__dot'] {
+            border-radius: 4px;
+            background: #EAEAF2;
+            width: 12px;
+            height: 12px;
+            margin-right: 4px;
+            padding: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        button[class*='BrainhubCarousel__dot--selected'] {
+            background: var(--c-blue);
+        }
+    }
+}

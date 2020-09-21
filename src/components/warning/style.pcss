@@ -1,0 +1,29 @@
+.warning {
+    z-index: 12;
+    position: fixed;
+    top: 0;
+    width: 1282px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background: var(--c-m-grey);
+    border-radius: 0 0 4px 4px;
+    transparent: all 0.3s;
+    color: #fff;
+
+    &__icon {
+        margin-right: 8px;
+
+        & path {
+            fill: var(--c-red);
+        }
+    }
+
+    &__list {
+        span {
+            display: block;
+            margin-bottom: 4px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.layout {
+    position: relative;
+    padding-top: 66px;
+    padding-bottom: 84px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+
+    @media(max-width: 768px) {
+        padding-bottom: 0; 
+    }
+
+    &__copyright {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: var(--col-12);
+        padding-bottom: 24px;
+        background: #fff;
+
+        @media(max-width: 768px) {
+            position: relative;
+            width: 100%;
+            padding: 40px 50px 60px;
+
+            & div {
+                margin-bottom: 16px;
+            }
+
+            & span {
+                display: block;
+            }
+        }
+    }
+}

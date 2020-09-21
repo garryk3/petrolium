@@ -1,0 +1,82 @@
+.popup {
+    &_logout {
+        height: 160px;
+    }
+
+    &_getCalc {
+        min-height: 360px;
+    }
+
+    &_calcName {
+        min-height: 285px;
+
+        p {
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: -0.5px;
+            color: #5E5E5E;
+            margin-top: 4px;
+            margin-bottom: 0;
+        }
+
+        & span[class*='input'] {
+            width: 100%;
+        }
+    }
+
+    &_cancelCalc {
+        min-height: 228px;
+        padding-top: 10px;
+    }
+
+    &__btnWrapper {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: auto;
+
+        &_calc {
+            margin-top: 40px;
+        }
+
+        &_calcName {
+            margin-top: 80px;
+        }
+
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__calcSuccess {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-grow: 1;
+
+        p {
+            display: flex;
+            align-items: center;
+        }
+
+        svg {
+            margin-right: 9px;
+
+            & path {
+                fill: var(--c-green);
+            }
+        }
+
+        button {
+            margin-top: auto;
+            margin-left: auto;
+        }
+    }
+
+    &__closeText {
+        color: var(--c-d-grey);
+        font-size: 14px;
+        line-height: 21px; 
+        letter-spacing: -0.5px;
+    }
+}
